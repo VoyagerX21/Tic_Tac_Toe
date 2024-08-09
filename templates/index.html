@@ -23,6 +23,7 @@
 
       .homepage {
         background-image: url("/static/img4.png");
+        /* background-color: white; */
         background-size: cover;
       }
 
@@ -41,7 +42,6 @@
         position: relative;
         height: 340px;
         width: 370px;
-        margin-left: 37%;
         margin-top: 2%;
         padding-left: 10px;
         padding-right: 10px;
@@ -76,6 +76,11 @@
       .player {
         display: flex;
         justify-content: space-between;
+      }
+
+      .player2 {
+        display: flex;
+        justify-content: center;
       }
 
       .player_heading {
@@ -182,70 +187,92 @@
         box-shadow: #3c4fe0 0 3px 7px inset;
         transform: translateY(2px);
       }
+      .option {
+        display: flex;
+        justify-content: space-between;
+        margin: 35px 510px 20px 510px;
+      }
+      .option2 {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 150px 0px 150px;
+      }
     </style>
   </head>
 
   <body class="homepage">
     <div class="heading">TIC-TAC-TOE</div>
-    <div class="tic-takotterbox">
-      <form method="post" action="{% url 'taken' %}">
-        {% csrf_token %}
-        <input type="hidden" name="id" value="1" />
-        <button class="button" type="submit">{{ first }}</button>
-      </form>
-      <form method="post" action="{% url 'taken' %}">
-        {% csrf_token %}
-        <input type="hidden" name="id" value="2" />
-        <button class="button" type="submit">{{ second }}</button>
-      </form>
-      <form method="post" action="{% url 'taken' %}">
-        {% csrf_token %}
-        <input type="hidden" name="id" value="3" />
-        <button class="button" type="submit">{{ third }}</button>
-      </form>
-      <form method="post" action="{% url 'taken' %}">
-        {% csrf_token %}
-        <input type="hidden" name="id" value="4" />
-        <button class="button" type="submit">{{ fourth }}</button>
-      </form>
-      <form method="post" action="{% url 'taken' %}">
-        {% csrf_token %}
-        <input type="hidden" name="id" value="5" />
-        <button class="button" type="submit">{{ fifth }}</button>
-      </form>
-      <form method="post" action="{% url 'taken' %}">
-        {% csrf_token %}
-        <input type="hidden" name="id" value="6" />
-        <button class="button" type="submit">{{ sixth }}</button>
-      </form>
-      <form method="post" action="{% url 'taken' %}">
-        {% csrf_token %}
-        <input type="hidden" name="id" value="7" />
-        <button class="button" type="submit">{{ seventh }}</button>
-      </form>
-      <form method="post" action="{% url 'taken' %}">
-        {% csrf_token %}
-        <input type="hidden" name="id" value="8" />
-        <button class="button" type="submit">{{ eighth }}</button>
-      </form>
-      <form method="post" action="{% url 'taken' %}">
-        {% csrf_token %}
-        <input type="hidden" name="id" value="9" />
-        <button class="button" type="submit">{{ ninth }}</button>
-      </form>
-    </div>
-    <div class="player_heading">
-      <label> Player 1</label>
-      <label> Player 2</label>
-    </div>
-    <div class="player">
-      <div class="player_1">
-        <img
-          src="https://thumbs.dreamstime.com/z/nerd-geek-thinking-clipart-picture-cartoon-character-78583260.jpg"
-          height="100px"
-          width="100px"
-        />
+    <div class="option2">
+      <div class="player">
+        <div class="player_1" style="margin-top: 130px">
+          <h3 style="color: white"><pre>  Player1</pre></h3>
+          <img
+            src="/static/temp-removebg-preview3.png"
+            height="200px"
+            width="150px"
+          />
+        </div>
       </div>
+      <div class="tic-takotterbox">
+        <form method="post" action="{% url 'taken' %}">
+          {% csrf_token %}
+          <input type="hidden" name="id" value="1" />
+          <button class="button" type="submit">{{ first }}</button>
+        </form>
+        <form method="post" action="{% url 'taken' %}">
+          {% csrf_token %}
+          <input type="hidden" name="id" value="2" />
+          <button class="button" type="submit">{{ second }}</button>
+        </form>
+        <form method="post" action="{% url 'taken' %}">
+          {% csrf_token %}
+          <input type="hidden" name="id" value="3" />
+          <button class="button" type="submit">{{ third }}</button>
+        </form>
+        <form method="post" action="{% url 'taken' %}">
+          {% csrf_token %}
+          <input type="hidden" name="id" value="4" />
+          <button class="button" type="submit">{{ fourth }}</button>
+        </form>
+        <form method="post" action="{% url 'taken' %}">
+          {% csrf_token %}
+          <input type="hidden" name="id" value="5" />
+          <button class="button" type="submit">{{ fifth }}</button>
+        </form>
+        <form method="post" action="{% url 'taken' %}">
+          {% csrf_token %}
+          <input type="hidden" name="id" value="6" />
+          <button class="button" type="submit">{{ sixth }}</button>
+        </form>
+        <form method="post" action="{% url 'taken' %}">
+          {% csrf_token %}
+          <input type="hidden" name="id" value="7" />
+          <button class="button" type="submit">{{ seventh }}</button>
+        </form>
+        <form method="post" action="{% url 'taken' %}">
+          {% csrf_token %}
+          <input type="hidden" name="id" value="8" />
+          <button class="button" type="submit">{{ eighth }}</button>
+        </form>
+        <form method="post" action="{% url 'taken' %}">
+          {% csrf_token %}
+          <input type="hidden" name="id" value="9" />
+          <button class="button" type="submit">{{ ninth }}</button>
+        </form>
+      </div>
+      <div class="player">
+        <div class="player_2" style="margin-top: 130px">
+          <h3 style="color: white"><pre>  Player2</pre></h3>
+          <img
+            src="/static/temp-removebg-preview.png"
+            height="200px"
+            width="150px"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="player2">
       <div
         class="calendar-counter"
         style="
@@ -257,29 +284,30 @@
           position: relative;
         "
       >
-        <div class="day">{{ score11 }}</div>
+        {% if score11 != '0' %}
+          <div class="day">{{ score11 }}</div>
+        {% endif %}
         <div class="day">{{ score12 }}</div>
-        <div class="day2">:</div>
+        <div class="day2"><pre></pre></div>
+        {% if score21 != '0' %}
         <div class="day">{{ score21 }}</div>
+        {% endif %}
         <div class="day">{{ score22 }}</div>
       </div>
-      <div class="player_2">
-        <img
-          src="http://clipartmag.com/images/person-thinking-cartoon-clipart-19.jpg"
-          height="100px"
-          width="100px"
-        />
-      </div>
     </div>
-    <form action="{% url 'reset' %}" method="post">
-      {% csrf_token %}
-      <button class="button-29" role="button">RESET GRID</button>
-    </form>
-    <a href="/"><button class="button-29" role="button">FRESH START</button></a>
-    <form action="{% url 'undo' %}" method="post">
-      {% csrf_token %}
-      <button class="button-29" role="button">UNDO</button>
-    </form>
+    <div class="option">
+      <form action="{% url 'reset' %}" method="post">
+        {% csrf_token %}
+        <button class="button-29" role="button">RESET GRID</button>
+      </form>
+      <form action="{% url 'undo' %}" method="post">
+        {% csrf_token %}
+        <button class="button-29" role="button">UNDO</button>
+      </form>
+      <a href="/"
+        ><button class="button-29" role="button">FRESH START</button></a
+      >
+    </div>
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"></script>
     {% for msgs in messages %}
     <script>
