@@ -1,8 +1,8 @@
 1. Background somewhat blur --> DONE
-2. Scores should be in center and somewhat bigger
+2. Scores should be in center and somewhat bigger --> Done
 3. Just above the scores P1 and P2 text should be there
-4. below the scores boxes three buttons should be there With proper finishing *Reset Board*, *Fresh Start*, *Undo*
-5. the grid size should be slightly bigger
-6. the icons of the players should be bigger in size and reside on both sides of the grid
+4. below the scores boxes three buttons should be there With proper finishing *Reset Board*, *Fresh Start*, *Undo* --> Done
+5. the grid size should be slightly bigger --> Done
+6. the icons of the players should be bigger in size and reside on both sides of the grid --> Done
 
 7. MAKE THE WEBSITE COMPLETELY RESPONSIVE
